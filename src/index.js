@@ -29,9 +29,11 @@ app.use((req,res,next)=>{
 
 //Routes 
 app.use(require('./routes/'));
+app.use(require('./routes/aunthentication'));
+app.use('/links',require('./routes/links'));
 
 //Public 
-
+app.use(express.static(path.join(__dirname,'public')));
 
 //Starting the server
 app.listen(app.get('port'),()=>{
