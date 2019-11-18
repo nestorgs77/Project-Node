@@ -24,4 +24,11 @@ router.get('/', async(req,res)=>{
   console.log(links);
   res.render('links/list', {links}); 
 })
+
+
+router.get('/login', (req,res)=>{
+  
+  
+  res.render('links/login'); 
+})
 module.exports=router ;
